@@ -24,7 +24,7 @@ Part of the [Free Code Camp](https://freecodecamp.org) curriculum
 - Clone repo or download and unpack
 - Install dependencies using npm
 - Make sure you have a running Mongo database
-- Add the connection URI for your MongoDB as an environment variable called MONGO_URI
+- Add the connection URI for your MongoDB as an environment variable called MLAB_URI
 - 'npm run start' to start the server on localhost
 
 
