@@ -2,33 +2,52 @@
 <html>
 
    <head>
-      <title>Exercise Tracker | Free Code Camp</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Exercise Tracker</title>
+      <link rel="shortcut icon" href="https://cdn.glitch.com/d572bc40-bb12-47ed-879e-4c83d2d30098%2Fdumbbell-icon.png?v=1570021549786" type="image/x-icon"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    </head>
 
    <body>
-      <div class="container">
-         <h1>Exercise tracker</h1>
-          <form action="/api/exercise/new-user" method="post">
-            <h3>Create a New User</h3>
-            <p><code>POST /api/exercise/new-user</code></p>
-            <input id="uname" type="text" name="username" placeholder="username">
-            <input type="submit" value="Submit">
-          </form>
-          <form action="/api/exercise/add" method="post">
-            <h3>Add exercises</h3>
-            <p><code>POST /api/exercise/add</code></p>
-            <input id="uid" type="text" name="userId" placeholder="userId*">
-            <input id="desc" type="text" name="description" placeholder="description*">
-            <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
-            <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
-            <input type="submit" value="Submit">
-          </form>
-          <p><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
-          <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
-          <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+      <div class="container my-3">
+         <h1 class="mb-5">Exercise tracker</h1>
+        <div class="row">
+          <div class="col-sm mb-5">
+            <form class="border rounded p-3" action="/api/exercise/new-user" method="post">
+              <h3>Create a New User</h3>
+              <div class="form-group">
+                <label for="uname"><code>POST /api/exercise/new-user</code></label>
+                <input class="form-control" id="uname" type="text" name="username" placeholder="username">
+              </div>       
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="col-sm mb-5">
+            <form class="border rounded p-3" action="/api/exercise/add" method="post">
+              <h3>Add exercises</h3>
+              <div class="form-group">
+                <label for="uid"><code>POST /api/exercise/add</code></label>
+                <input class="form-control" id="uid" type="text" name="userId" placeholder="userId*">
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="desc" type="text" name="description" placeholder="description*">
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)"> 
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+        <p><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code>
+          <br><strong>{ }</strong> = required, <strong>[ ]</strong> = optional
+          <br><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number
+        </p>
+          <a href="https://michaelbaghel.com"><em>By Michael Baghel</em></a>
       </div>
    </body>
 

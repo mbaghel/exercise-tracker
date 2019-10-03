@@ -90,6 +90,7 @@ app.post('/api/exercise/add', (req, res, next) => {
 
 // Getting user's exercise log
 app.get('/api/exercise/log', (req, res, next) => {
+  if (!req.query.userId) return next(new Error('Use format "/api/exercise/log?userId=**id_here**"'));
   const { userId } = req.query;
   let limit;
   if (req.query.limit) {
